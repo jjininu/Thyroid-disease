@@ -1,27 +1,27 @@
 from collections import namedtuple
 from datetime import datetime
 import uuid
-from insurance.config.configuration import Configuartion
-from insurance.logger import logging
-from insurance.exception import CustomException
+from thyroid-disease.config.configuration import Configuartion
+from thyroid-disease.logger import logging
+from thyroid-disease.exception import CustomException
 from threading import Thread
 from typing import List
 
 from multiprocessing import Process
-from insurance.entity.artifact_entity import ModelPusherArtifact, DataIngestionArtifact, ModelEvaluationArtifact
-from insurance.entity.artifact_entity import DataValidationArtifact, DataTransformationArtifact, ModelTrainerArtifact
-from insurance.entity.config_entity import DataIngestionConfig, ModelEvaluationConfig
-from insurance.component.data_ingestion import DataIngestion
-from insurance.component.data_validation import DataValidation
-from insurance.component.data_transformation import DataTransformation
-from insurance.component.model_trainer import ModelTrainer
-from insurance.component.model_evaluation import ModelEvaluation
-from insurance.component.model_pusher import ModelPusher
+from thyroid-disease.entity.artifact_entity import ModelPusherArtifact, DataIngestionArtifact, ModelEvaluationArtifact
+from thyroid-disease.entity.artifact_entity import DataValidationArtifact, DataTransformationArtifact, ModelTrainerArtifact
+from thyroid-disease.entity.config_entity import DataIngestionConfig, ModelEvaluationConfig
+from thyroid-disease.component.data_ingestion import DataIngestion
+from thyroid-disease.component.data_validation import DataValidation
+from thyroid-disease.component.data_transformation import DataTransformation
+from thyroid-disease.component.model_trainer import ModelTrainer
+from thyroid-disease.component.model_evaluation import ModelEvaluation
+from thyroid-disease.component.model_pusher import ModelPusher
 import os, sys
 from collections import namedtuple
 from datetime import datetime
 import pandas as pd
-from insurance.constant import EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME
+from thyroid-disease.constant import EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME
 
 Experiment = namedtuple("Experiment", ["experiment_id", "initialization_timestamp", "artifact_time_stamp",
                                        "running_status", "start_time", "stop_time", "execution_time", "message",

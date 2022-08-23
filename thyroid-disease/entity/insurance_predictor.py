@@ -1,13 +1,13 @@
 import os
 import sys
 
-from insurance.exception import CustomException
-from insurance.util.util import load_object
+from thyroid-disease.exception import CustomException
+from thyroid-disease.util.util import load_object
 
 import pandas as pd
 
 
-class InsuranceData:
+class thyroid-diseaseData:
 
     def __init__(self,
                  age :  int,
@@ -36,14 +36,14 @@ class InsuranceData:
         except Exception as e:
             raise CustomException(e, sys) from e
 
-    def get_insurance_input_data_frame(self):
+    def get_thyroid-disease_input_data_frame(self):
         try:
-            insurance_input_dict = self.get_insurance_data_as_dict()
-            return pd.DataFrame(insurance_input_dict)
+            thyroid-disease_input_dict = self.get_thyroid-disease_data_as_dict()
+            return pd.DataFrame(thyroid-disease_input_dict)
         except Exception as e:
             raise CustomException(e, sys) from e
 
-    def get_insurance_data_as_dict(self):
+    def get_thyroid-disease_data_as_dict(self):
         try:
             input_data = {
                "age" : [self.age],
@@ -59,7 +59,7 @@ class InsuranceData:
             raise CustomException(e, sys)
 
 
-class InsurancePredictor:
+class thyroid-diseasePredictor:
 
     def __init__(self, model_dir: str):
         try:

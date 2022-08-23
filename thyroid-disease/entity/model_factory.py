@@ -3,14 +3,14 @@ import importlib
 from pyexpat import model
 import numpy as np
 import yaml
-from insurance.exception import CustomException
+from thyroid-disease.exception import CustomException
 import os
 import sys
-from insurance.constant import *
+from thyroid-disease.constant import *
 
 from collections import namedtuple
 from typing import List
-from insurance.logger import logging
+from thyroid-disease.logger import logging
 
 from sklearn.metrics import r2_score,mean_squared_error
 GRID_SEARCH_KEY = 'grid_search'

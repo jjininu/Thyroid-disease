@@ -1,12 +1,12 @@
 
-from insurance.constant import *
-from insurance.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
+from thyroid-disease.constant import *
+from thyroid-disease.entity.config_entity import DataIngestionConfig, DataTransformationConfig,DataValidationConfig,   \
 ModelTrainerConfig,ModelEvaluationConfig,ModelPusherConfig,TrainingPipelineConfig
-from insurance.util.util import read_yaml_file
-from insurance.logger import logging
+from thyroid-disease.util.util import read_yaml_file
+from thyroid-disease.logger import logging
 import sys,os
-from insurance.constant import *
-from insurance.exception import CustomException
+from thyroid-disease.constant import *
+from thyroid-disease.exception import CustomException
 
 
 class Configuartion:

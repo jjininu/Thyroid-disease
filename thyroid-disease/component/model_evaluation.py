@@ -1,15 +1,15 @@
 
 
-from insurance.logger import logging
-from insurance.exception import CustomException
-from insurance.entity.config_entity import ModelEvaluationConfig
-from insurance.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact,ModelTrainerArtifact,ModelEvaluationArtifact
-from insurance.constant import *
+from thyroid-disease.logger import logging
+from thyroid-disease.exception import CustomException
+from thyroid-disease.entity.config_entity import ModelEvaluationConfig
+from thyroid-disease.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact,ModelTrainerArtifact,ModelEvaluationArtifact
+from thyroid-disease.constant import *
 import numpy as np
 import os
 import sys
-from insurance.util.util import write_yaml_file, read_yaml_file, load_object,load_data
-from insurance.entity.model_factory import evaluate_regression_model
+from thyroid-disease.util.util import write_yaml_file, read_yaml_file, load_object,load_data
+from thyroid-disease.entity.model_factory import evaluate_regression_model
 
 
 

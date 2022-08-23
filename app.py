@@ -2,25 +2,25 @@ from flask import Flask, request
 import sys
 
 
-from insurance.util.util import read_yaml_file, write_yaml_file
+from thyroid-disease.util.util import read_yaml_file, write_yaml_file
 from matplotlib.style import context
-from insurance.logger import logging
-from insurance.exception import CustomException
+from thyroid-disease.logger import logging
+from thyroid-disease.exception import CustomException
 import os, sys
 import json
-from insurance.config.configuration import Configuartion
-from insurance.constant import CONFIG_DIR, get_current_time_stamp
-from insurance.pipeline.pipeline import Pipeline
-from insurance.entity.insurance_predictor import InsuranceData, InsurancePredictor
+from thyroid-disease.config.configuration import Configuartion
+from thyroid-disease.constant import CONFIG_DIR, get_current_time_stamp
+from thyroid-disease.pipeline.pipeline import Pipeline
+from thyroid-disease.entity.thyroid-disease_predictor import thyroid-diseaseData, thyroid-diseasePredictor
 from flask import send_file, abort, render_template
-from insurance.util.util import change
+from thyroid-disease.util.util import change
 import numpy as np
 import pandas as pd
 
 
 ROOT_DIR = os.getcwd()
 LOG_FOLDER_NAME = "logs"
-PIPELINE_FOLDER_NAME = "insurance prediction"
+PIPELINE_FOLDER_NAME = "thyroid-disease prediction"
 SAVED_MODELS_DIR_NAME = "saved_models"
 MODEL_CONFIG_FILE_PATH = os.path.join(ROOT_DIR, CONFIG_DIR, "model.yaml")
 LOG_DIR = os.path.join(ROOT_DIR, LOG_FOLDER_NAME)
@@ -28,18 +28,18 @@ PIPELINE_DIR = os.path.join(ROOT_DIR, PIPELINE_FOLDER_NAME)
 MODEL_DIR = os.path.join(ROOT_DIR, SAVED_MODELS_DIR_NAME)
 
 
-from insurance.logger import get_log_dataframe
+from thyroid-disease.logger import get_log_dataframe
 
-INSURANCE_DATA_KEY = "insurance_data"
-INSURANCE_VALUE_KEY = "charges"
+thyroid-disease_DATA_KEY = "thyroid-disease_data"
+thyroid-disease_VALUE_KEY = "charges"
 
 app = Flask(__name__)
 
 
-@app.route('/artifact', defaults={'req_path': 'insurance'})
+@app.route('/artifact', defaults={'req_path': 'thyroid-disease'})
 @app.route('/artifact/<path:req_path>')
 def render_artifact_dir(req_path):
-    os.makedirs("insurance", exist_ok=True)
+    os.makedirs("thyroid-disease", exist_ok=True)
     # Joining the base and the requested path
     print(f"req_path: {req_path}")
     abs_path = os.path.join(req_path)
@@ -106,8 +106,8 @@ def train():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     context = {
-        INSURANCE_DATA_KEY: None,
-        INSURANCE_VALUE_KEY: None
+        thyroid-disease_DATA_KEY: None,
+        thyroid-disease_VALUE_KEY: None
     }
 
     if request.method == 'POST':
@@ -134,7 +134,7 @@ def predict():
         region_input  = change(region)
         
         
-        insurance_data = InsuranceData( age = age,
+        thyroid-disease_data = thyroid-diseaseData( age = age,
                                 sex_male = int(sex_male) ,
                                 bmi = float(bmi),
                                 children = int(children),
@@ -143,12 +143,12 @@ def predict():
                                 region_southeast = int(region_input["region_southeast"]),
                                 region_southwest =  int(region_input["region_southwest"]))
                      
-        insurance_df = insurance_data.get_insurance_input_data_frame()
-        insurance_predictor = InsurancePredictor(model_dir=MODEL_DIR)
-        charges = insurance_predictor.predict(X=insurance_df)
+        thyroid-disease_df = thyroid-disease_data.get_thyroid-disease_input_data_frame()
+        thyroid-disease_predictor = thyroid-diseasePredictor(model_dir=MODEL_DIR)
+        charges = thyroid-disease_predictor.predict(X=thyroid-disease_df)
         context = {
-           INSURANCE_DATA_KEY: insurance_data.get_insurance_data_as_dict(),
-           INSURANCE_VALUE_KEY: charges,
+           thyroid-disease_DATA_KEY: thyroid-disease_data.get_thyroid-disease_data_as_dict(),
+           thyroid-disease_VALUE_KEY: charges,
            "message": "Prediction done."}
         return render_template('predict.html', context=context)
     return render_template('predict.html', context=context)

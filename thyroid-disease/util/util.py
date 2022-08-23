@@ -1,10 +1,10 @@
 import yaml
-from insurance.exception import CustomException
+from thyroid-disease.exception import CustomException
 import os,sys
 import numpy as np
 import dill
 import pandas as pd
-from insurance.constant import *
+from thyroid-disease.constant import *
 
 
 def write_yaml_file(file_path:str,data:dict=None):

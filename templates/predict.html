@@ -3,7 +3,7 @@
 {% block head %}
 
 
-<title>Insurance Charges Estimator</title>
+<title>thyroid-disease Charges Estimator</title>
 {% endblock %}
 
 {% block content %}
@@ -13,7 +13,7 @@
 
 
         <form action="/predict" method="post">
-            <legend>Insurance charge Estimation Form</legend>
+            <legend>thyroid-disease charge Estimation Form</legend>
             <div class="mb-3">
                 <label class="form-label">AGE</label>
                 <input class="form-control" type="text" name="age" placeholder="Enter Age"/>
@@ -79,7 +79,7 @@
             </div> 
             <div class="mb-3">
 
-                <input class="btn btn-primary" type="submit" value="Predict Insurance Charges" required />
+                <input class="btn btn-primary" type="submit" value="Predict thyroid-disease Charges" required />
             </div>
 
         </form>
@@ -88,18 +88,18 @@
     <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
         <div class="card">
             <div class="card-header">
-              Insurance Charges
+              thyroid-disease Charges
             </div>
             <div class="card-body">
-        {% if context['insurance_data'] is not none %}
+        {% if context['thyroid-disease_data'] is not none %}
         <table class="table table-striped">
-            <caption>Insurance charge Prediction </caption>
+            <caption>thyroid-disease charge Prediction </caption>
             <tr>
                 <th>Input Feature</th>
                 <th>Feature Value</th>
 
             </tr>
-            {% for column,value in context['insurance_data'].items() %}
+            {% for column,value in context['thyroid-disease_data'].items() %}
 
 
 

@@ -1,9 +1,9 @@
 from cgi import test
 from sklearn import preprocessing
-from insurance.exception import CustomException
-from insurance.logger import logging
-from insurance.entity.config_entity import DataTransformationConfig 
-from insurance.entity.artifact_entity import DataIngestionArtifact,\
+from thyroid-disease.exception import CustomException
+from thyroid-disease.logger import logging
+from thyroid-disease.entity.config_entity import DataTransformationConfig 
+from thyroid-disease.entity.artifact_entity import DataIngestionArtifact,\
 DataValidationArtifact,DataTransformationArtifact
 from sklearn.preprocessing import OneHotEncoder
 import sys,os
@@ -14,8 +14,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 import pandas as pd
-from insurance.constant import *
-from insurance.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data
+from thyroid-disease.constant import *
+from thyroid-disease.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data
 
 
 

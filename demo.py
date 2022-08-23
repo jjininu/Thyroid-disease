@@ -1,8 +1,8 @@
-from insurance.pipeline.pipeline import Pipeline
-from insurance.exception import CustomException
-from insurance.logger import logging
-from insurance.config.configuration import Configuartion
-from insurance.component.data_transformation import DataTransformation
+from thyroid-disease.pipeline.pipeline import Pipeline
+from thyroid-disease.exception import CustomException
+from thyroid-disease.logger import logging
+from thyroid-disease.config.configuration import Configuartion
+from thyroid-disease.component.data_transformation import DataTransformation
 import os
 def main():
     try:

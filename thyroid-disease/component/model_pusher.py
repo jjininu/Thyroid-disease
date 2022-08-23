@@ -1,7 +1,7 @@
-from insurance.logger import logging
-from insurance.exception import CustomException
-from insurance.entity.artifact_entity import ModelPusherArtifact, ModelEvaluationArtifact 
-from insurance.entity.config_entity import ModelPusherConfig
+from thyroid-disease.logger import logging
+from thyroid-disease.exception import CustomException
+from thyroid-disease.entity.artifact_entity import ModelPusherArtifact, ModelEvaluationArtifact 
+from thyroid-disease.entity.config_entity import ModelPusherConfig
 import os, sys
 import shutil
 

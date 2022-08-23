@@ -1,9 +1,9 @@
 
 
-from insurance.logger import logging
-from insurance.exception import CustomException
-from insurance.entity.config_entity import DataValidationConfig
-from insurance.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
+from thyroid-disease.logger import logging
+from thyroid-disease.exception import CustomException
+from thyroid-disease.entity.config_entity import DataValidationConfig
+from thyroid-disease.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact
 import os,sys
 import pandas  as pd
 from evidently.model_profile import Profile

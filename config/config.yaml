@@ -1,9 +1,9 @@
 training_pipeline_config:
-  pipeline_name: insurance
+  pipeline_name: thyroid-disease
   artifact_dir: artifact
 
 data_ingestion_config:
-  local_file : "C:\\Users\\jjini\\insurance-\\Data\\insurance .csv"
+  local_file : "C:\\Users\\jjini\\thyroid-disease-\\Data\\thyroid-disease .csv"
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test 

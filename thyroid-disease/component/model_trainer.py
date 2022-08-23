@@ -1,17 +1,17 @@
 
-from insurance.exception import CustomException
+from thyroid-disease.exception import CustomException
 import sys
-from insurance.logger import logging
+from thyroid-disease.logger import logging
 from typing import List
-from insurance.entity.artifact_entity import DataTransformationArtifact, ModelTrainerArtifact
-from insurance.entity.config_entity import ModelTrainerConfig
-from insurance.util.util import load_numpy_array_data,save_object,load_object
-from insurance.entity.model_factory import MetricInfoArtifact, ModelFactory,GridSearchedBestModel
-from insurance.entity.model_factory import evaluate_regression_model
+from thyroid-disease.entity.artifact_entity import DataTransformationArtifact, ModelTrainerArtifact
+from thyroid-disease.entity.config_entity import ModelTrainerConfig
+from thyroid-disease.util.util import load_numpy_array_data,save_object,load_object
+from thyroid-disease.entity.model_factory import MetricInfoArtifact, ModelFactory,GridSearchedBestModel
+from thyroid-disease.entity.model_factory import evaluate_regression_model
 
 
 
-class InsuranceEstimatorModel:
+class thyroid-diseaseEstimatorModel:
     def __init__(self, preprocessing_object, trained_model_object):
         """
         TrainedModel constructor
@@ -92,9 +92,9 @@ class ModelTrainer:
 
 
             trained_model_file_path=self.model_trainer_config.trained_model_file_path
-            insurance_model = InsuranceEstimatorModel(preprocessing_object=preprocessing_obj,trained_model_object=model_object)
+            thyroid-disease_model = thyroid-diseaseEstimatorModel(preprocessing_object=preprocessing_obj,trained_model_object=model_object)
             logging.info(f"Saving model at path: {trained_model_file_path}")
-            save_object(file_path=trained_model_file_path,obj=insurance_model)
+            save_object(file_path=trained_model_file_path,obj=thyroid-disease_model)
 
 
             model_trainer_artifact=  ModelTrainerArtifact(is_trained=True,message="Model Trained successfully",

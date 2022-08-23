@@ -2,7 +2,7 @@ from setuptools import setup,find_packages
 from typing import List
 
 #Declaring variables for setup functions
-PROJECT_NAME="insurance_charge-predictor"
+PROJECT_NAME="thyroid-disease_charge-predictor"
 VERSION="0.0.1"
 AUTHOR="Junior Eshetu"
 DESRCIPTION="Machine Learning Project"
