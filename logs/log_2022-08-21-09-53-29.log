@@ -1,0 +1,246 @@
+[2022-08-21 09:53:30,675]^;WARNING^;224^;_internal.py^;_log()^; * Debugger is active!
+[2022-08-21 09:53:30,685]^;INFO^;224^;_internal.py^;_log()^; * Debugger PIN: 134-210-643
+[2022-08-21 09:53:43,194]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:53:43] "GET / HTTP/1.1" 200 -
+[2022-08-21 09:53:43,800]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:53:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-21 09:53:48,492]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:53:48] "GET /predict HTTP/1.1" 200 -
+[2022-08-21 09:55:26,952]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:55:26] "GET /saved_models HTTP/1.1" 200 -
+[2022-08-21 09:55:32,611]^;INFO^;223^;configuration.py^;get_training_pipeline_config()^;Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact')
+[2022-08-21 09:55:32,615]^;INFO^;116^;pipeline.py^;run_pipeline()^;Pipeline starting.
+[2022-08-21 09:55:32,616]^;INFO^;132^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='d50f273d-756e-4025-a7c9-f6de291144de', initialization_timestamp='2022-08-21-09-55-32', artifact_time_stamp='2022-08-21-09-55-32', running_status=True, start_time=datetime.datetime(2022, 8, 21, 9, 55, 32, 615098), stop_time=None, execution_time=None, message='Pipeline has been started.', experiment_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None)
+[2022-08-21 09:55:32,631]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:55:32] "GET /train HTTP/1.1" 200 -
+[2022-08-21 09:55:32,641]^;INFO^;63^;configuration.py^;get_data_ingestion_config()^;Data Ingestion config: DataIngestionConfig(local_file='C:\\Users\\jjini\\insurance-\\Data\\insurance .csv', raw_data_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-32\\ingested_data', ingested_train_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-32\\ingested_data\\train', ingested_test_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-32\\ingested_data\\test')
+[2022-08-21 09:55:32,641]^;INFO^;21^;data_ingestion.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:32,646]^;INFO^;54^;data_ingestion.py^;split_data_as_train_test()^;Reading csv file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-32\ingested_data\insurance .csv]
+[2022-08-21 09:55:32,699]^;INFO^;65^;data_ingestion.py^;split_data_as_train_test()^;Splitting data into train and test
+[2022-08-21 09:55:32,712]^;INFO^;83^;data_ingestion.py^;split_data_as_train_test()^;Exporting training datset to file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-32\ingested_data\train\train.csv]
+[2022-08-21 09:55:32,725]^;INFO^;88^;data_ingestion.py^;split_data_as_train_test()^;Exporting test dataset to file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-32\ingested_data\test\test.csv]
+[2022-08-21 09:55:32,729]^;INFO^;96^;data_ingestion.py^;split_data_as_train_test()^;Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-32\\ingested_data\\train\\train.csv', test_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-32\\ingested_data\\test\\test.csv', message='Data ingestion completed successfully.')]
+[2022-08-21 09:55:32,729]^;INFO^;114^;data_ingestion.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:32,730]^;INFO^;21^;data_validation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:33,100]^;INFO^;140^;data_validation.py^;initiate_data_validation()^;Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\jjini\\insurance-\\config\\schema.yaml', report_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_validation\\2022-08-21-09-55-32\\report.json', report_page_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_validation\\2022-08-21-09-55-32\\report.html', is_validated=True, message='Data Validation performed successully.')
+[2022-08-21 09:55:33,100]^;INFO^;147^;data_validation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:33,100]^;INFO^;146^;configuration.py^;get_data_transformation_config()^;Data transformation config: DataTransformationConfig(transformed_train_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\transformed_data\\train', transformed_test_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\transformed_data\\test', preprocessed_object_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\preprocessed\\preprocessed.pkl')
+[2022-08-21 09:55:33,100]^;INFO^;31^;data_transformation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:33,100]^;INFO^;82^;data_transformation.py^;initiate_data_transformation()^;Obtaining preprocessing object.
+[2022-08-21 09:55:33,104]^;INFO^;66^;data_transformation.py^;get_data_transformer_object()^;Numerical columns: ['age', 'bmi', 'children', 'sex_male', 'smoker_yes', 'region_northwest', 'region_southeast', 'region_southwest']
+[2022-08-21 09:55:33,104]^;INFO^;86^;data_transformation.py^;initiate_data_transformation()^;Obtaining training and test file path.
+[2022-08-21 09:55:33,105]^;INFO^;93^;data_transformation.py^;initiate_data_transformation()^;Loading training and test data as pandas dataframe.
+[2022-08-21 09:55:33,120]^;INFO^;103^;data_transformation.py^;initiate_data_transformation()^;Splitting input and target feature from training and testing dataframe.
+[2022-08-21 09:55:33,123]^;INFO^;111^;data_transformation.py^;initiate_data_transformation()^;Applying preprocessing object on training dataframe and testing dataframe
+[2022-08-21 09:55:33,134]^;INFO^;129^;data_transformation.py^;initiate_data_transformation()^;Saving transformed training and testing array.
+[2022-08-21 09:55:33,138]^;INFO^;136^;data_transformation.py^;initiate_data_transformation()^;Saving preprocessing object.
+[2022-08-21 09:55:33,142]^;INFO^;146^;data_transformation.py^;initiate_data_transformation()^;Data transformationa artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\transformed_data\\train\\train.npz', transformed_test_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\transformed_data\\test\\test.npz', preprocessed_object_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-32\\preprocessed\\preprocessed.pkl')
+[2022-08-21 09:55:33,142]^;INFO^;152^;data_transformation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:33,142]^;INFO^;177^;configuration.py^;get_model_trainer_config()^;Model trainer config: ModelTrainerConfig(trained_model_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl', base_accuracy=0.6, model_config_file_path='config\\model.yaml')
+[2022-08-21 09:55:33,142]^;INFO^;46^;model_trainer.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:33,142]^;INFO^;54^;model_trainer.py^;initiate_model_trainer()^;Loading transformed training dataset
+[2022-08-21 09:55:33,146]^;INFO^;58^;model_trainer.py^;initiate_model_trainer()^;Loading transformed testing dataset
+[2022-08-21 09:55:33,147]^;INFO^;62^;model_trainer.py^;initiate_model_trainer()^;Splitting training and testing input and target feature
+[2022-08-21 09:55:33,147]^;INFO^;66^;model_trainer.py^;initiate_model_trainer()^;Extracting model config file path
+[2022-08-21 09:55:33,147]^;INFO^;69^;model_trainer.py^;initiate_model_trainer()^;Initializing model factory class using above model config file: config\model.yaml
+[2022-08-21 09:55:33,153]^;INFO^;74^;model_trainer.py^;initiate_model_trainer()^;Expected accuracy: 0.6
+[2022-08-21 09:55:33,154]^;INFO^;76^;model_trainer.py^;initiate_model_trainer()^;Initiating operation model selecttion
+[2022-08-21 09:55:33,154]^;INFO^;366^;model_factory.py^;get_best_model()^;Started Initializing model from config file
+[2022-08-21 09:55:33,154]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.linear_model' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\linear_model\\__init__.py'> import LinearRegression
+[2022-08-21 09:55:33,156]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ LinearRegression().fit_intercept=True
+[2022-08-21 09:55:33,289]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.ensemble' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\ensemble\\__init__.py'> import RandomForestRegressor
+[2022-08-21 09:55:33,290]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ RandomForestRegressor().min_samples_leaf=3
+[2022-08-21 09:55:33,290]^;INFO^;368^;model_factory.py^;get_best_model()^;Initialized model: [InitializedModelDetail(model_serial_number='module_0', model=LinearRegression(), param_grid_search={'fit_intercept': [True, False]}, model_name='sklearn.linear_model.LinearRegression'), InitializedModelDetail(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), param_grid_search={'min_samples_leaf': [6]}, model_name='sklearn.ensemble.RandomForestRegressor')]
+[2022-08-21 09:55:33,290]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-08-21 09:55:33,291]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).cv=5
+[2022-08-21 09:55:33,292]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).verbose=2
+[2022-08-21 09:55:33,292]^;INFO^;243^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LinearRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:33,329]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-08-21 09:55:33,331]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).cv=5
+[2022-08-21 09:55:33,331]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).verbose=2
+[2022-08-21 09:55:33,332]^;INFO^;243^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestRegressor Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,538]^;INFO^;353^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Acceptable model found:GridSearchedBestModel(model_serial_number='module_0', model=LinearRegression(), best_model=LinearRegression(), best_parameters={'fit_intercept': True}, best_score=0.744785626074848)
+[2022-08-21 09:55:34,539]^;INFO^;353^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Acceptable model found:GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594116298167757)
+[2022-08-21 09:55:34,539]^;INFO^;359^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Best model: GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594116298167757)
+[2022-08-21 09:55:34,540]^;INFO^;79^;model_trainer.py^;initiate_model_trainer()^;Best model found on training dataset: GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594116298167757)
+[2022-08-21 09:55:34,540]^;INFO^;81^;model_trainer.py^;initiate_model_trainer()^;Extracting trained model list.
+[2022-08-21 09:55:34,540]^;INFO^;85^;model_trainer.py^;initiate_model_trainer()^;Evaluation all trained model on training and testing dataset both
+[2022-08-21 09:55:34,540]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [LinearRegression] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,541]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,542]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:34,542]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.7504974702000087		 0.7513308760855887		0.7509139419028664
+[2022-08-21 09:55:34,542]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,542]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.0008334058855800075].
+[2022-08-21 09:55:34,542]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [5996.894203308609].
+[2022-08-21 09:55:34,542]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [6230.462364971671].
+[2022-08-21 09:55:34,542]^;INFO^;120^;model_factory.py^;evaluate_regression_model()^;Acceptable model found MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664, index_number=0). 
+[2022-08-21 09:55:34,542]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [RandomForestRegressor] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,571]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,571]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:34,571]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.9060318472924107		 0.8429426151463987		0.873349349764228
+[2022-08-21 09:55:34,571]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:34,571]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.06308923214601203].
+[2022-08-21 09:55:34,571]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [3680.2663859925165].
+[2022-08-21 09:55:34,571]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [4951.519865242367].
+[2022-08-21 09:55:34,572]^;INFO^;88^;model_trainer.py^;initiate_model_trainer()^;Best found model on both training and testing dataset.
+[2022-08-21 09:55:34,572]^;INFO^;96^;model_trainer.py^;initiate_model_trainer()^;Saving model at path: C:\Users\jjini\insurance-\insurance\artifact\model_trainer\2022-08-21-09-55-32\trained_model\model.pkl
+[2022-08-21 09:55:34,576]^;INFO^;110^;model_trainer.py^;initiate_model_trainer()^;Model Trainer Artifact: ModelTrainerArtifact(is_trained=True, message='Model Trained successfully', trained_model_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl', train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664)
+[2022-08-21 09:55:34,576]^;INFO^;116^;model_trainer.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:34,576]^;INFO^;194^;configuration.py^;get_model_evaluation_config()^;Model Evaluation Config: ModelEvaluationConfig(model_evaluation_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_evaluation\\model_evaluation.yaml', time_stamp='2022-08-21-09-55-32').
+[2022-08-21 09:55:34,576]^;INFO^;24^;model_evaluation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Evaluation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:34,592]^;INFO^;106^;model_evaluation.py^;initiate_model_evaluation()^;Converting target column into numpy array.
+[2022-08-21 09:55:34,593]^;INFO^;109^;model_evaluation.py^;initiate_model_evaluation()^;Conversion completed target column into numpy array.
+[2022-08-21 09:55:34,593]^;INFO^;112^;model_evaluation.py^;initiate_model_evaluation()^;Dropping target column from the dataframe.
+[2022-08-21 09:55:34,594]^;INFO^;115^;model_evaluation.py^;initiate_model_evaluation()^;Dropping target column from the dataframe completed.
+[2022-08-21 09:55:34,595]^;INFO^;120^;model_evaluation.py^;initiate_model_evaluation()^;Not found any existing model. Hence accepting trained model
+[2022-08-21 09:55:34,595]^;INFO^;64^;model_evaluation.py^;update_evaluation_report()^;Previous eval result: {}
+[2022-08-21 09:55:34,596]^;INFO^;80^;model_evaluation.py^;update_evaluation_report()^;Updated eval result:{'best_model': {'model_path': 'C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl'}}
+[2022-08-21 09:55:34,597]^;INFO^;124^;model_evaluation.py^;initiate_model_evaluation()^;Model accepted. Model eval artifact ModelEvaluationArtifact(is_model_accepted=True, evaluated_model_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl') created
+[2022-08-21 09:55:34,597]^;INFO^;160^;model_evaluation.py^;__del__()^;====================Model Evaluation log completed.==================== 
+[2022-08-21 09:55:34,597]^;INFO^;208^;configuration.py^;get_model_pusher_config()^;Model pusher config ModelPusherConfig(export_dir_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095534')
+[2022-08-21 09:55:34,597]^;INFO^;15^;model_pusher.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:34,597]^;INFO^;28^;model_pusher.py^;export_model()^;Exporting model file: [C:\Users\jjini\insurance-\saved_models\20220821095534\model.pkl]
+[2022-08-21 09:55:34,599]^;INFO^;34^;model_pusher.py^;export_model()^;Trained model: C:\Users\jjini\insurance-\insurance\artifact\model_trainer\2022-08-21-09-55-32\trained_model\model.pkl is copied in export dir:[C:\Users\jjini\insurance-\saved_models\20220821095534\model.pkl]
+[2022-08-21 09:55:34,599]^;INFO^;39^;model_pusher.py^;export_model()^;Model pusher artifact: [ModelPusherArtifact(is_model_pusher=True, export_model_file_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095534\\model.pkl')]
+[2022-08-21 09:55:34,599]^;INFO^;51^;model_pusher.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:34,599]^;INFO^;150^;pipeline.py^;run_pipeline()^;Model pusher artifact: ModelPusherArtifact(is_model_pusher=True, export_model_file_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095534\\model.pkl')
+[2022-08-21 09:55:34,599]^;INFO^;153^;pipeline.py^;run_pipeline()^;Pipeline completed.
+[2022-08-21 09:55:34,599]^;INFO^;168^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='d50f273d-756e-4025-a7c9-f6de291144de', initialization_timestamp='2022-08-21-09-55-32', artifact_time_stamp='2022-08-21-09-55-32', running_status=False, start_time=datetime.datetime(2022, 8, 21, 9, 55, 32, 615098), stop_time=datetime.datetime(2022, 8, 21, 9, 55, 34, 599088), execution_time=datetime.timedelta(seconds=1, microseconds=983990), message='Pipeline has been completed.', experiment_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\experiment\\experiment.csv', accuracy=0.7509139419028664, is_model_accepted=True)
+[2022-08-21 09:55:41,672]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:55:41] "GET /predict HTTP/1.1" 200 -
+[2022-08-21 09:55:42,911]^;INFO^;223^;configuration.py^;get_training_pipeline_config()^;Training pipleine config: TrainingPipelineConfig(artifact_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact')
+[2022-08-21 09:55:42,912]^;INFO^;116^;pipeline.py^;run_pipeline()^;Pipeline starting.
+[2022-08-21 09:55:42,913]^;INFO^;132^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='def1a8eb-cce5-4041-9412-5bd779d4cca9', initialization_timestamp='2022-08-21-09-55-42', artifact_time_stamp='2022-08-21-09-55-42', running_status=True, start_time=datetime.datetime(2022, 8, 21, 9, 55, 42, 913274), stop_time=None, execution_time=None, message='Pipeline has been started.', experiment_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\experiment\\experiment.csv', accuracy=None, is_model_accepted=None)
+[2022-08-21 09:55:42,922]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:55:42] "GET /train HTTP/1.1" 200 -
+[2022-08-21 09:55:42,927]^;INFO^;63^;configuration.py^;get_data_ingestion_config()^;Data Ingestion config: DataIngestionConfig(local_file='C:\\Users\\jjini\\insurance-\\Data\\insurance .csv', raw_data_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-42\\ingested_data', ingested_train_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-42\\ingested_data\\train', ingested_test_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-42\\ingested_data\\test')
+[2022-08-21 09:55:42,927]^;INFO^;21^;data_ingestion.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:42,931]^;INFO^;54^;data_ingestion.py^;split_data_as_train_test()^;Reading csv file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-42\ingested_data\insurance .csv]
+[2022-08-21 09:55:42,949]^;INFO^;65^;data_ingestion.py^;split_data_as_train_test()^;Splitting data into train and test
+[2022-08-21 09:55:42,955]^;INFO^;83^;data_ingestion.py^;split_data_as_train_test()^;Exporting training datset to file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-42\ingested_data\train\train.csv]
+[2022-08-21 09:55:42,962]^;INFO^;88^;data_ingestion.py^;split_data_as_train_test()^;Exporting test dataset to file: [C:\Users\jjini\insurance-\insurance\artifact\data_ingestion\2022-08-21-09-55-42\ingested_data\test\test.csv]
+[2022-08-21 09:55:42,965]^;INFO^;96^;data_ingestion.py^;split_data_as_train_test()^;Data Ingestion artifact:[DataIngestionArtifact(train_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-42\\ingested_data\\train\\train.csv', test_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_ingestion\\2022-08-21-09-55-42\\ingested_data\\test\\test.csv', message='Data ingestion completed successfully.')]
+[2022-08-21 09:55:42,965]^;INFO^;114^;data_ingestion.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Ingestion log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:42,966]^;INFO^;21^;data_validation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:43,255]^;INFO^;140^;data_validation.py^;initiate_data_validation()^;Data validation artifact: DataValidationArtifact(schema_file_path='C:\\Users\\jjini\\insurance-\\config\\schema.yaml', report_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_validation\\2022-08-21-09-55-42\\report.json', report_page_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_validation\\2022-08-21-09-55-42\\report.html', is_validated=True, message='Data Validation performed successully.')
+[2022-08-21 09:55:43,255]^;INFO^;147^;data_validation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Valdaition log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:43,255]^;INFO^;146^;configuration.py^;get_data_transformation_config()^;Data transformation config: DataTransformationConfig(transformed_train_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\transformed_data\\train', transformed_test_dir='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\transformed_data\\test', preprocessed_object_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\preprocessed\\preprocessed.pkl')
+[2022-08-21 09:55:43,255]^;INFO^;31^;data_transformation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:43,255]^;INFO^;82^;data_transformation.py^;initiate_data_transformation()^;Obtaining preprocessing object.
+[2022-08-21 09:55:43,258]^;INFO^;66^;data_transformation.py^;get_data_transformer_object()^;Numerical columns: ['age', 'bmi', 'children', 'sex_male', 'smoker_yes', 'region_northwest', 'region_southeast', 'region_southwest']
+[2022-08-21 09:55:43,258]^;INFO^;86^;data_transformation.py^;initiate_data_transformation()^;Obtaining training and test file path.
+[2022-08-21 09:55:43,258]^;INFO^;93^;data_transformation.py^;initiate_data_transformation()^;Loading training and test data as pandas dataframe.
+[2022-08-21 09:55:43,273]^;INFO^;103^;data_transformation.py^;initiate_data_transformation()^;Splitting input and target feature from training and testing dataframe.
+[2022-08-21 09:55:43,276]^;INFO^;111^;data_transformation.py^;initiate_data_transformation()^;Applying preprocessing object on training dataframe and testing dataframe
+[2022-08-21 09:55:43,285]^;INFO^;129^;data_transformation.py^;initiate_data_transformation()^;Saving transformed training and testing array.
+[2022-08-21 09:55:43,292]^;INFO^;136^;data_transformation.py^;initiate_data_transformation()^;Saving preprocessing object.
+[2022-08-21 09:55:43,295]^;INFO^;146^;data_transformation.py^;initiate_data_transformation()^;Data transformationa artifact: DataTransformationArtifact(is_transformed=True, message='Data transformation successfull.', transformed_train_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\transformed_data\\train\\train.npz', transformed_test_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\transformed_data\\test\\test.npz', preprocessed_object_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\data_transformation\\2022-08-21-09-55-42\\preprocessed\\preprocessed.pkl')
+[2022-08-21 09:55:43,295]^;INFO^;152^;data_transformation.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+[2022-08-21 09:55:43,295]^;INFO^;177^;configuration.py^;get_model_trainer_config()^;Model trainer config: ModelTrainerConfig(trained_model_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-42\\trained_model\\model.pkl', base_accuracy=0.6, model_config_file_path='config\\model.yaml')
+[2022-08-21 09:55:43,295]^;INFO^;46^;model_trainer.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:43,295]^;INFO^;54^;model_trainer.py^;initiate_model_trainer()^;Loading transformed training dataset
+[2022-08-21 09:55:43,296]^;INFO^;58^;model_trainer.py^;initiate_model_trainer()^;Loading transformed testing dataset
+[2022-08-21 09:55:43,296]^;INFO^;62^;model_trainer.py^;initiate_model_trainer()^;Splitting training and testing input and target feature
+[2022-08-21 09:55:43,296]^;INFO^;66^;model_trainer.py^;initiate_model_trainer()^;Extracting model config file path
+[2022-08-21 09:55:43,296]^;INFO^;69^;model_trainer.py^;initiate_model_trainer()^;Initializing model factory class using above model config file: config\model.yaml
+[2022-08-21 09:55:43,301]^;INFO^;74^;model_trainer.py^;initiate_model_trainer()^;Expected accuracy: 0.6
+[2022-08-21 09:55:43,302]^;INFO^;76^;model_trainer.py^;initiate_model_trainer()^;Initiating operation model selecttion
+[2022-08-21 09:55:43,302]^;INFO^;366^;model_factory.py^;get_best_model()^;Started Initializing model from config file
+[2022-08-21 09:55:43,302]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.linear_model' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\linear_model\\__init__.py'> import LinearRegression
+[2022-08-21 09:55:43,302]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ LinearRegression().fit_intercept=True
+[2022-08-21 09:55:43,303]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.ensemble' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\ensemble\\__init__.py'> import RandomForestRegressor
+[2022-08-21 09:55:43,303]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ RandomForestRegressor().min_samples_leaf=3
+[2022-08-21 09:55:43,304]^;INFO^;368^;model_factory.py^;get_best_model()^;Initialized model: [InitializedModelDetail(model_serial_number='module_0', model=LinearRegression(), param_grid_search={'fit_intercept': [True, False]}, model_name='sklearn.linear_model.LinearRegression'), InitializedModelDetail(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), param_grid_search={'min_samples_leaf': [6]}, model_name='sklearn.ensemble.RandomForestRegressor')]
+[2022-08-21 09:55:43,304]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-08-21 09:55:43,305]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).cv=5
+[2022-08-21 09:55:43,305]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=LinearRegression(),
+             param_grid={'fit_intercept': [True, False]}).verbose=2
+[2022-08-21 09:55:43,305]^;INFO^;243^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training LinearRegression Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:43,328]^;INFO^;210^;model_factory.py^;class_for_name()^;Executing command: from <module 'sklearn.model_selection' from 'C:\\Users\\jjini\\insurance-\\venv\\lib\\site-packages\\sklearn\\model_selection\\__init__.py'> import GridSearchCV
+[2022-08-21 09:55:43,329]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).cv=5
+[2022-08-21 09:55:43,330]^;INFO^;189^;model_factory.py^;update_property_of_class()^;Executing:$ GridSearchCV(cv=5, estimator=RandomForestRegressor(min_samples_leaf=3),
+             param_grid={'min_samples_leaf': [6]}).verbose=2
+[2022-08-21 09:55:43,330]^;INFO^;243^;model_factory.py^;execute_grid_search_operation()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> f"Training RandomForestRegressor Started." <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,621]^;INFO^;353^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Acceptable model found:GridSearchedBestModel(model_serial_number='module_0', model=LinearRegression(), best_model=LinearRegression(), best_parameters={'fit_intercept': True}, best_score=0.744785626074848)
+[2022-08-21 09:55:44,621]^;INFO^;353^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Acceptable model found:GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594370040363234)
+[2022-08-21 09:55:44,622]^;INFO^;359^;model_factory.py^;get_best_model_from_grid_searched_best_model_list()^;Best model: GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594370040363234)
+[2022-08-21 09:55:44,622]^;INFO^;79^;model_trainer.py^;initiate_model_trainer()^;Best model found on training dataset: GridSearchedBestModel(model_serial_number='module_1', model=RandomForestRegressor(min_samples_leaf=3), best_model=RandomForestRegressor(min_samples_leaf=6), best_parameters={'min_samples_leaf': 6}, best_score=0.8594370040363234)
+[2022-08-21 09:55:44,622]^;INFO^;81^;model_trainer.py^;initiate_model_trainer()^;Extracting trained model list.
+[2022-08-21 09:55:44,622]^;INFO^;85^;model_trainer.py^;initiate_model_trainer()^;Evaluation all trained model on training and testing dataset both
+[2022-08-21 09:55:44,623]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [LinearRegression] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,624]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,624]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:44,624]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.7504974702000087		 0.7513308760855887		0.7509139419028664
+[2022-08-21 09:55:44,624]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,624]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.0008334058855800075].
+[2022-08-21 09:55:44,624]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [5996.894203308609].
+[2022-08-21 09:55:44,625]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [6230.462364971671].
+[2022-08-21 09:55:44,625]^;INFO^;120^;model_factory.py^;evaluate_regression_model()^;Acceptable model found MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664, index_number=0). 
+[2022-08-21 09:55:44,625]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [RandomForestRegressor] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,658]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,658]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:44,658]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.9066231183574495		 0.8446320143674169		0.8745303827190872
+[2022-08-21 09:55:44,658]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,658]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.0619911039900326].
+[2022-08-21 09:55:44,658]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [3668.669537413696].
+[2022-08-21 09:55:44,658]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [4924.817171350467].
+[2022-08-21 09:55:44,658]^;INFO^;88^;model_trainer.py^;initiate_model_trainer()^;Best found model on both training and testing dataset.
+[2022-08-21 09:55:44,659]^;INFO^;96^;model_trainer.py^;initiate_model_trainer()^;Saving model at path: C:\Users\jjini\insurance-\insurance\artifact\model_trainer\2022-08-21-09-55-42\trained_model\model.pkl
+[2022-08-21 09:55:44,663]^;INFO^;110^;model_trainer.py^;initiate_model_trainer()^;Model Trainer Artifact: ModelTrainerArtifact(is_trained=True, message='Model Trained successfully', trained_model_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-42\\trained_model\\model.pkl', train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664)
+[2022-08-21 09:55:44,663]^;INFO^;116^;model_trainer.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:44,663]^;INFO^;194^;configuration.py^;get_model_evaluation_config()^;Model Evaluation Config: ModelEvaluationConfig(model_evaluation_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_evaluation\\model_evaluation.yaml', time_stamp='2022-08-21-09-55-42').
+[2022-08-21 09:55:44,663]^;INFO^;24^;model_evaluation.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Evaluation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:44,680]^;INFO^;106^;model_evaluation.py^;initiate_model_evaluation()^;Converting target column into numpy array.
+[2022-08-21 09:55:44,681]^;INFO^;109^;model_evaluation.py^;initiate_model_evaluation()^;Conversion completed target column into numpy array.
+[2022-08-21 09:55:44,681]^;INFO^;112^;model_evaluation.py^;initiate_model_evaluation()^;Dropping target column from the dataframe.
+[2022-08-21 09:55:44,682]^;INFO^;115^;model_evaluation.py^;initiate_model_evaluation()^;Dropping target column from the dataframe completed.
+[2022-08-21 09:55:44,684]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [InsuranceEstimatorModel] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,691]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,691]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:44,691]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.7504974702000087		 0.7513308760855887		0.7509139419028664
+[2022-08-21 09:55:44,691]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,691]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.0008334058855800075].
+[2022-08-21 09:55:44,691]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [5996.894203308609].
+[2022-08-21 09:55:44,691]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [6230.462364971671].
+[2022-08-21 09:55:44,692]^;INFO^;120^;model_factory.py^;evaluate_regression_model()^;Acceptable model found MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664, index_number=0). 
+[2022-08-21 09:55:44,692]^;INFO^;78^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Started evaluating model: [InsuranceEstimatorModel] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,700]^;INFO^;97^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Score <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,700]^;INFO^;98^;model_factory.py^;evaluate_regression_model()^;Train Score		 Test Score		 Average Score
+[2022-08-21 09:55:44,700]^;INFO^;99^;model_factory.py^;evaluate_regression_model()^;0.7504974702000087		 0.7513308760855887		0.7509139419028664
+[2022-08-21 09:55:44,700]^;INFO^;101^;model_factory.py^;evaluate_regression_model()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loss <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2022-08-21 09:55:44,700]^;INFO^;102^;model_factory.py^;evaluate_regression_model()^;Diff test train accuracy: [0.0008334058855800075].
+[2022-08-21 09:55:44,700]^;INFO^;103^;model_factory.py^;evaluate_regression_model()^;Train root mean squared error: [5996.894203308609].
+[2022-08-21 09:55:44,700]^;INFO^;104^;model_factory.py^;evaluate_regression_model()^;Test root mean squared error: [6230.462364971671].
+[2022-08-21 09:55:44,700]^;INFO^;120^;model_factory.py^;evaluate_regression_model()^;Acceptable model found MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664, index_number=1). 
+[2022-08-21 09:55:44,700]^;INFO^;136^;model_evaluation.py^;initiate_model_evaluation()^;Model evaluation completed. model metric artifact: MetricInfoArtifact(model_name='LinearRegression()', model_object=LinearRegression(), train_rmse=5996.894203308609, test_rmse=6230.462364971671, train_accuracy=0.7504974702000087, test_accuracy=0.7513308760855887, model_accuracy=0.7509139419028664, index_number=1)
+[2022-08-21 09:55:44,701]^;INFO^;64^;model_evaluation.py^;update_evaluation_report()^;Previous eval result: {'best_model': {'model_path': 'C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl'}}
+[2022-08-21 09:55:44,701]^;INFO^;80^;model_evaluation.py^;update_evaluation_report()^;Updated eval result:{'best_model': {'model_path': 'C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-42\\trained_model\\model.pkl'}, 'history': {'2022-08-21-09-55-42': {'model_path': 'C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-32\\trained_model\\model.pkl'}}}
+[2022-08-21 09:55:44,703]^;INFO^;149^;model_evaluation.py^;initiate_model_evaluation()^;Model accepted. Model eval artifact ModelEvaluationArtifact(is_model_accepted=True, evaluated_model_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\model_trainer\\2022-08-21-09-55-42\\trained_model\\model.pkl') created
+[2022-08-21 09:55:44,703]^;INFO^;160^;model_evaluation.py^;__del__()^;====================Model Evaluation log completed.==================== 
+[2022-08-21 09:55:44,703]^;INFO^;208^;configuration.py^;get_model_pusher_config()^;Model pusher config ModelPusherConfig(export_dir_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095544')
+[2022-08-21 09:55:44,703]^;INFO^;15^;model_pusher.py^;__init__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:44,704]^;INFO^;28^;model_pusher.py^;export_model()^;Exporting model file: [C:\Users\jjini\insurance-\saved_models\20220821095544\model.pkl]
+[2022-08-21 09:55:44,705]^;INFO^;34^;model_pusher.py^;export_model()^;Trained model: C:\Users\jjini\insurance-\insurance\artifact\model_trainer\2022-08-21-09-55-42\trained_model\model.pkl is copied in export dir:[C:\Users\jjini\insurance-\saved_models\20220821095544\model.pkl]
+[2022-08-21 09:55:44,705]^;INFO^;39^;model_pusher.py^;export_model()^;Model pusher artifact: [ModelPusherArtifact(is_model_pusher=True, export_model_file_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095544\\model.pkl')]
+[2022-08-21 09:55:44,705]^;INFO^;51^;model_pusher.py^;__del__()^;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model Pusher log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+[2022-08-21 09:55:44,705]^;INFO^;150^;pipeline.py^;run_pipeline()^;Model pusher artifact: ModelPusherArtifact(is_model_pusher=True, export_model_file_path='C:\\Users\\jjini\\insurance-\\saved_models\\20220821095544\\model.pkl')
+[2022-08-21 09:55:44,705]^;INFO^;153^;pipeline.py^;run_pipeline()^;Pipeline completed.
+[2022-08-21 09:55:44,706]^;INFO^;168^;pipeline.py^;run_pipeline()^;Pipeline experiment: Experiment(experiment_id='def1a8eb-cce5-4041-9412-5bd779d4cca9', initialization_timestamp='2022-08-21-09-55-42', artifact_time_stamp='2022-08-21-09-55-42', running_status=False, start_time=datetime.datetime(2022, 8, 21, 9, 55, 42, 913274), stop_time=datetime.datetime(2022, 8, 21, 9, 55, 44, 706788), execution_time=datetime.timedelta(seconds=1, microseconds=793514), message='Pipeline has been completed.', experiment_file_path='C:\\Users\\jjini\\insurance-\\insurance\\artifact\\experiment\\experiment.csv', accuracy=0.7509139419028664, is_model_accepted=True)
+[2022-08-21 09:55:50,752]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:55:50] "GET /predict HTTP/1.1" 200 -
+[2022-08-21 09:56:02,137]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 09:56:02] "POST /predict HTTP/1.1" 200 -
+[2022-08-21 10:33:44,442]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 10:33:44] "POST /predict HTTP/1.1" 200 -

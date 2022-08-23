@@ -1,0 +1,7 @@
+[2022-08-21 14:26:42,123]^;WARNING^;224^;_internal.py^;_log()^; * Debugger is active!
+[2022-08-21 14:26:42,139]^;INFO^;224^;_internal.py^;_log()^; * Debugger PIN: 134-210-643
+[2022-08-21 14:26:57,338]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 14:26:57] "POST /predict HTTP/1.1" 200 -
+[2022-08-21 14:26:57,672]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 14:26:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-21 14:27:00,296]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 14:27:00] "GET /saved_models HTTP/1.1" 200 -
+[2022-08-21 14:27:03,445]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 14:27:03] "GET /predict HTTP/1.1" 200 -
+[2022-08-21 14:27:11,105]^;INFO^;224^;_internal.py^;_log()^;127.0.0.1 - - [21/Aug/2022 14:27:11] "POST /predict HTTP/1.1" 200 -
