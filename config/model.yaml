@@ -6,8 +6,8 @@ grid_search:
     verbose: 2
 model_selection:
   module_0:
-    class: LinearRegression
-    module: sklearn.linear_model
+    class: KNeighborsClassifier
+    module: sklearn.neighbors 
     params:
       fit_intercept: true
     search_param_grid:
@@ -15,79 +15,42 @@ model_selection:
       - true
       - false
   module_1:
-    class: RandomForestRegressor
+    class: LinearSVC
+    module: sklearn.svm
+    params:
+      min_samples_leaf: 3
+    search_param_grid:
+      min_samples_leaf:
+  module_2:
+    class: DecisionTreeClassifier
+    module: sklearn.tree
+    params:
+      fit_intercept: true
+    search_param_grid:
+      fit_intercept:
+      - true
+      - false
+  module_3:
+    class: AdaBoostClassifier
     module: sklearn.ensemble
     params:
       min_samples_leaf: 3
     search_param_grid:
       min_samples_leaf:
-      - 6
-  # model_2:
-  #    class: XGBRegressor
-  #    module: xgboost
-  #    params:
-       
-  #       eval_metric: rmse
-  #       n_estimators: 100
-  #       max_depth: 3
-  #       learning_rate: 0.1
-  #       subsample: 0.8
-  #       colsample_bytree: 0.8
-  #       min_child_weight: 3
-  #       gamma: 0.1
-  #       reg_alpha: 0.1
-  #       reg_lambda: 0.1
-  #       base_score: 0.5
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #       random_state: 42
-  #       num_boost_round: 1000
-  #       early_stopping_rounds: 10
-  #       n_jobs: -1
-  #       verbose: True
-  #    search_param_grid:
-  #       n_estimators: [10,20,30,50,100,200,300,500,1000]
-        
-  
-
+  module_4:
+    class: RandomForestClassifier
+    module: sklearn.ensemble 
+    params:
+      fit_intercept: true
+    search_param_grid:
+      fit_intercept:
+      - true
+      - false
+  module_5:
+    class: GaussianNB
+    module: sklearn.naive_bayes
+    params:
+      min_samples_leaf: 3
+    search_param_grid:
+      min_samples_leaf:
+ 
