@@ -53,40 +53,28 @@ class DataIngestion:
 
             logging.info(f"Reading csv file: [{thyroid-disease_file_path}]")
             thyroid-disease_data_frame = pd.read_csv(thyroid-disease_file_path)
-            thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
+            #thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
 
-            thyroid-disease_data_frame["income_cat"] = pd.cut(
-                thyroid-disease_data_frame["charges"],
-                bins=[0.0, 1.5, 3.0, 4.5, 6.0, np.inf],
-                labels=[1,2,3,4,5])
+
             
             
 
             logging.info(f"Splitting data into train and test")
-            strat_train_set = None
-            strat_test_set = None
+            train_set = None
+            test_set = None
 
-            split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
+            train, test = train_test_split(thyroid-disease_data_frame, test_size = 0.2, stratify=df[['binaryClass']],shuffle=True)
 
-            for train_index,test_index in split.split(thyroid-disease_data_frame, thyroid-disease_data_frame["income_cat"]):
-                strat_train_set = thyroid-disease_data_frame.loc[train_index].drop(["income_cat"],axis=1)
-                strat_test_set = thyroid-disease_data_frame.loc[test_index].drop(["income_cat"],axis=1)
 
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,
                                             "train"+".csv")
 
             test_file_path = os.path.join(self.data_ingestion_config.ingested_test_dir,
                                         "test"+".csv")
-            
-            if strat_train_set is not None:
-                os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
-                logging.info(f"Exporting training datset to file: [{train_file_path}]")
-                strat_train_set.to_csv(train_file_path,index=False)
-
-            if strat_test_set is not None:
-                os.makedirs(self.data_ingestion_config.ingested_test_dir, exist_ok= True)
-                logging.info(f"Exporting test dataset to file: [{test_file_path}]")
-                strat_test_set.to_csv(test_file_path,index=False)
+            os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
+            os.makedirs(self.data_ingestion_config.ingested_test_dir, exist_ok= True)
+            train.to_csv(train_file_path,index=False)
+            test.to_csv(test_file_path,index=False)
             
 
             data_ingestion_artifact = DataIngestionArtifact(train_file_path=train_file_path,
