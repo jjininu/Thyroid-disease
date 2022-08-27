@@ -135,4 +135,10 @@ def change(region):
     region_southeast = 0
     region_southwest = 0 
     return ({"region_northwest":0,"region_southeast":0,"region_southwest":0})
+
+def remove_column(unwanted,df):
+    df.drop(unwanted,axis = 1,inplace=True)
+    return df
+    
+
     

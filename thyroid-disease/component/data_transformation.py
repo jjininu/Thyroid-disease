@@ -15,7 +15,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 import pandas as pd
 from thyroid-disease.constant import *
-from thyroid-disease.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data
+from thyroid-disease.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data,remove_column
 
 
 
@@ -45,10 +45,14 @@ class DataTransformation:
             dataset_schema = read_yaml_file(file_path=schema_file_path)
 
             numerical_columns = dataset_schema[NUMERICAL_COLUMN_KEY]
-            # categorical_columns = dataset_schema[CATEGORICAL_COLUMN_KEY]
+            categorical_columns = dataset_schema[CATEGORICAL_COLUMN_KEY]
+            unwanted_features = ['TSH measured', 'T3 measured',  'TT4 measured',  'T4U measured',
+                                     'FTI measured', 'TBG measured', 'TBG']
+            
 
 
-            num_pipeline = Pipeline(steps=[
+
+            num_pipeline = Pipeline(steps=["remove_column",remove_column()
                 ('imputer', SimpleImputer()),
                 ('scaler', StandardScaler())
                 ]

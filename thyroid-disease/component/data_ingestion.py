@@ -7,7 +7,7 @@ from thyroid-disease.entity.artifact_entity import DataIngestionArtifact
 import tarfile
 import numpy as np
 import urllib.request
-
+from thyroid-disease.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data,remove_column
 import pandas as pd
 from sklearn.model_selection import StratifiedShuffleSplit
 from thyroid-disease.util.util import read_write_file
@@ -40,7 +40,8 @@ class DataIngestion:
             return local_file
         except Exception as e:
             raise Exception(e)
-    
+    def pre_cleaning(self):
+        
     
     def split_data_as_train_test(self) -> DataIngestionArtifact:
         try:
@@ -51,9 +52,13 @@ class DataIngestion:
             thyroid-disease_file_path = os.path.join(raw_data_dir,file_name)
 
 
+
             logging.info(f"Reading csv file: [{thyroid-disease_file_path}]")
+            unwanted_features = ['TSH measured', 'T3 measured',  'TT4 measured',  'T4U measured',
+                                  'FTI measured', 'TBG measured', 'TBG']
             thyroid-disease_data_frame = pd.read_csv(thyroid-disease_file_path)
-            #thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
+            remove_column(thyroid-disease_data_frame)
+            thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
 
 
             
