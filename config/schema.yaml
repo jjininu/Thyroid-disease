@@ -1,40 +1,39 @@
 columns:
-  
-
-  age :  int
-  sex : int
-  on thyroxine : int
-  query on thyroxine : int
-  on antithyroid medication : int
-  sick : int
-  pregnant : int
-  thyroid surgery : int
-  I131 treatment :  int
-  query hypothyroid :  int
-  query hyperthyroid :  int
-  lithium : int
-  goitre : int
-  tumor : int
-  hypopituitary : int
-  psych : int
-  TSH measured : int
+  age : int
+  sex : category
+  on thyroxine : category 
+  query on thyroxine : category
+  on antithyroid medication : category
+  sick : category
+  pregnant : category
+  thyroid surgery : category
+  I131 treatment : category
+  query hypothyroid : category
+  query hyperthyroid : category
+  lithium : category
+  goitre : category
+  tumor : category
+  hypopituitary :  category
+  psych : category
   TSH : float
-  T3 measured : int
-  T3 : float
-  TT4 measured : int
+  T3 :  float
   TT4 : float
-  T4U measured : int
   T4U : float
-  FTI measured : int
-  FTI : float
-  TBG measured : int
-  TBG : float
-  referral source : int
-  binaryClass : int
-
+  FTI : float 
+  referral source : category
+  binaryClass : category
 
 
 numerical_columns:
+  - TSH 
+  - T3 
+  - TT4 
+  - T4U 
+  - FTI 
+  
+
+
+categorical_columns:
   - age 
   - sex 
   - on thyroxine 
@@ -43,7 +42,7 @@ numerical_columns:
   - sick 
   - pregnant 
   - thyroid surgery 
-  - I131 treatment 
+  - I131 treatment
   - query hypothyroid 
   - query hyperthyroid 
   - lithium 
@@ -51,27 +50,6 @@ numerical_columns:
   - tumor 
   - hypopituitary 
   - psych 
-  - TSH measured 
-  - TSH 
-  - T3 measured 
-  - T3 
-  - TT4 measured
-  - TT4 
-  - T4U measured 
-  - T4U 
-  - FTI measured 
-  - FTI 
-  - TBG measured 
-  - TBG 
-  - referral source 
-  - binaryClass 
-
-
-
-
-target_column : 
-  - binaryClass
-
 
 
 

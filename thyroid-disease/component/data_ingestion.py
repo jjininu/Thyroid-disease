@@ -34,16 +34,19 @@ class DataIngestion:
             if os.path.exists(raw_data_dir):
                 os.remove(raw_data_dir)
             os.makedirs(raw_data_dir,exist_ok=True)
-            local_file = self.data_ingestion_config.local_file
+            file = self.data_ingestion_config.local_file
+            df = pd.read_csv(file)
+            df.to_csv(raw_data_dir+"/insurance.csv",index=False)
             
-            shutil.copy(local_file, raw_data_dir)
-            return local_file
+            
+            logging.info(f"Data transfer completed successfully.")
+            
         except Exception as e:
             raise Exception(e)
-    def pre_cleaning(self):
+   
         
     
-    def split_data_as_train_test(self) -> DataIngestionArtifact:
+    def pre_clean_split(self) -> DataIngestionArtifact:
         try:
             raw_data_dir = self.data_ingestion_config.raw_data_dir
 
@@ -57,14 +60,11 @@ class DataIngestion:
             unwanted_features = ['TSH measured', 'T3 measured',  'TT4 measured',  'T4U measured',
                                   'FTI measured', 'TBG measured', 'TBG']
             thyroid-disease_data_frame = pd.read_csv(thyroid-disease_file_path)
-            remove_column(thyroid-disease_data_frame)
-            thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
-
-
-            
-            
+            remove_column(thyroid-disease_data_frame,unwanted_features)
+            #thyroid-disease_data_frame  =pd.get_dummies(thyroid-disease_data_frame,drop_first=True)
 
             logging.info(f"Splitting data into train and test")
+
             train_set = None
             test_set = None
 
@@ -95,7 +95,7 @@ class DataIngestion:
     def initiate_data_ingestion_from_local(self):
         try:
             self.transfer_data()
-            return self.split_data_as_train_test()
+            return self.pre_clean_split()
 
         except Exception as e:
             raise Exception(e)

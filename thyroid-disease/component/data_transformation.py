@@ -1,4 +1,6 @@
 from cgi import test
+
+from pandas.io.parquet import to_parquet
 from sklearn import preprocessing
 from thyroid-disease.exception import CustomException
 from thyroid-disease.logger import logging
@@ -16,6 +18,7 @@ from sklearn.impute import SimpleImputer
 import pandas as pd
 from thyroid-disease.constant import *
 from thyroid-disease.util.util import read_yaml_file,save_object,save_numpy_array_data,load_data,remove_column
+from imblearn.over_sampling import SMOTE
 
 
 
@@ -36,9 +39,19 @@ class DataTransformation:
         except Exception as e:
             raise CustomException(e,sys) from e
 
-    
+   
 
-    def get_data_transformer_object(self)->ColumnTransformer:
+    def data_transformation(self,data):
+        data.replace("?",np.nan,inplace = True)
+        data
+
+
+        
+
+
+
+
+
         try:
             schema_file_path = self.data_validation_artifact.schema_file_path
 
@@ -46,13 +59,11 @@ class DataTransformation:
 
             numerical_columns = dataset_schema[NUMERICAL_COLUMN_KEY]
             categorical_columns = dataset_schema[CATEGORICAL_COLUMN_KEY]
-            unwanted_features = ['TSH measured', 'T3 measured',  'TT4 measured',  'T4U measured',
-                                     'FTI measured', 'TBG measured', 'TBG']
+
             
 
 
-
-            num_pipeline = Pipeline(steps=["remove_column",remove_column()
+            num_pipeline = Pipeline(steps=[
                 ('imputer', SimpleImputer()),
                 ('scaler', StandardScaler())
                 ]
