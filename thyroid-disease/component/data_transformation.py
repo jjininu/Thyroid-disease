@@ -42,8 +42,23 @@ class DataTransformation:
    
 
     def data_transformation(self,data):
-        data.replace("?",np.nan,inplace = True)
-        data
+        try:
+            schema_file_path = self.data_validation_artifact.schema_file_path
+            dataset_schema = read_yaml_file(file_path=schema_file_path)
+            numerical_columns = dataset_schema[NUMERICAL_COLUMN_KEY]
+            categorical_columns = dataset_schema[CATEGORICAL_COLUMN_KEY]
+
+            data.replace("?",np.nan,inplace = True)
+            numeric_imp = SimpleImputer(strategy="median")
+            catagory_imp = SimpleImputer(strategy="most_frequent")
+            numeric_imp.fit_transform(data[numerical_columns])
+            catagory_imp.fit_transform(data[categorical_columns])
+            pd.get_dummies(data)
+            
+            return data
+        except Exception as e:
+            raise (e,sys)
+
 
 
         
