@@ -25,6 +25,7 @@ columns:
 
 
 numerical_columns:
+  - age
   - TSH 
   - T3 
   - TT4 
@@ -34,7 +35,7 @@ numerical_columns:
 
 
 categorical_columns:
-  - age 
+   
   - sex 
   - on thyroxine 
   - query on thyroxine 

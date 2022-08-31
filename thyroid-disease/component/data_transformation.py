@@ -53,11 +53,13 @@ class DataTransformation:
             catagory_imp = SimpleImputer(strategy="most_frequent")
             numeric_imp.fit_transform(data[numerical_columns])
             catagory_imp.fit_transform(data[categorical_columns])
-            pd.get_dummies(data)
-            
+            data = pd.get_dummies(data[categorical_columns],drop_first=True)
+            scaler  = StandardScaler()
+            data = scaler.fit_
+
             return data
         except Exception as e:
-            raise (e,sys)
+            raise CustomException(e,sys) from e
 
 
 
