@@ -54,12 +54,15 @@ class DataTransformation:
             numeric_imp.fit_transform(data[numerical_columns])
             catagory_imp.fit_transform(data[categorical_columns])
             data = pd.get_dummies(data[categorical_columns],drop_first=True)
-            scaler  = StandardScaler()
-            data = scaler.fit_
-
             return data
         except Exception as e:
             raise CustomException(e,sys) from e
+    
+    def scaling(self,train_data,test_data):
+        scaler  = StandardScaler()
+        
+
+        data_scaled = scaler.fit_transform()
 
 
 
