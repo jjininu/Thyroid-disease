@@ -58,58 +58,25 @@ class DataTransformation:
         except Exception as e:
             raise CustomException(e,sys) from e
     
-    def scaling(self,train_data,test_data):
-        scaler  = StandardScaler()
-        
-
-        data_scaled = scaler.fit_transform()
-
-
-
-        
-
-
-
-
-
+    def scaling(self,data):
         try:
-            schema_file_path = self.data_validation_artifact.schema_file_path
-
-            dataset_schema = read_yaml_file(file_path=schema_file_path)
-
-            numerical_columns = dataset_schema[NUMERICAL_COLUMN_KEY]
-            categorical_columns = dataset_schema[CATEGORICAL_COLUMN_KEY]
-
-            
-
-
-            num_pipeline = Pipeline(steps=[
-                ('imputer', SimpleImputer()),
-                ('scaler', StandardScaler())
-                ]
-                )
-
-            cat_pipeline = Pipeline(steps=[
-                 ('impute', SimpleImputer(strategy="most_frequent")),
-                 ('scaler', StandardScaler(with_mean=False))])
-
-
-
-            
-
-            # logging.info(f"Categorical columns: {categorical_columns}")
-            logging.info(f"Numerical columns: {numerical_columns}")
-
-
-            preprocessing = ColumnTransformer([
-                ('num_pipeline', num_pipeline, numerical_columns),
-                
-                # ('cat_pipeline', cat_pipeline, categorical_columns),
-            ])
-            return preprocessing
-
+            data = self.data_transformation(data)
+            scaler  = StandardScaler()
+            X, y = data[:, :-1], data[:, -1]
+            fit  = scaler.fit(X)
+            scaled_x = fit.transform(X)
+            return scale
         except Exception as e:
-            raise CustomException(e,sys) from e   
+            raise CustomException(e,sys) from e
+
+    def correct_imbalance(self.data):
+        try:
+            pass
+            data = self.scaling(data)
+
+            logging("Imbalance data was corrected")
+        except Exception as e:
+            raise CustomException(e,sys)
 
 
     def initiate_data_transformation(self)->DataTransformationArtifact:
